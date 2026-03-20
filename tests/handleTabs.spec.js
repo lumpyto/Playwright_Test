@@ -1,6 +1,6 @@
 import {test, expect} from '@playwright/test'
 
-test.only('Handle different Tabs', async ({browser}) =>{
+test('Handle different Tabs', async ({browser}) =>{
 
     let context = await browser.newContext()
 
