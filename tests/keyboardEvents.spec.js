@@ -3,7 +3,7 @@ import {test, expect} from '@playwright/test'
 test('Keyboard Activities', async function ({page}) {
     await page.goto('https://www.google.com/');
     // Scrolls automatically so that button is visible
-    await page.getByRole('button', { name: 'Отхвърляне на всички' }).click();
+    await page.getByRole('button', { name: /reject|отхвърляне/i }).click();
 
     // This will type your name then click arrow left once, select the family name and delete it !!!
     await page.locator("textarea[name='q']").focus();

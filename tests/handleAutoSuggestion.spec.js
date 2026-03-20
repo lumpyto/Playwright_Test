@@ -2,7 +2,7 @@ import {test, expect} from '@playwright/test'
 
 test('Handel Auto Suggestion using keyboard', async function ({page}) {
     await page.goto('https://www.google.com/');
-    await page.getByRole('button', { name: 'Отхвърляне на всички' }).click();
+    await page.getByRole('button', { name: /reject|отхвърляне/i }).click();
     await page.locator("textarea[name='q']").fill('Lyubomir Petrov');
     await page.waitForSelector("div[role='presentation']");
     await page.keyboard.press("ArrowDown");
@@ -12,7 +12,7 @@ test('Handel Auto Suggestion using keyboard', async function ({page}) {
 
 test('Verify Application Title using Loop', async function ({page}) {
     await page.goto('https://www.google.com/');
-    await page.getByRole('button', { name: 'Отхвърляне на всички' }).click();
+    await page.getByRole('button', { name: /reject|отхвърляне/i }).click();
     await page.locator("textarea[name='q']").fill('Lyubomir Petrov');
     await page.waitForSelector("div[role='presentation']");
 
