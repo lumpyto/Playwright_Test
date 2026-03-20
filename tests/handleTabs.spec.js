@@ -16,7 +16,7 @@ test('Handle different Tabs', async ({browser}) =>{
         ]
        
     )
-    await newPage.getByRole('button', { name: 'Allow all cookies' }).click();
+    await newPage.getByRole('button', { name: 'Allow all cookies' }).click({ timeout: 3000 }).catch(() => {});
     await newPage.getByLabel('Email or phone number').fill('Lyubo');
     await newPage.getByPlaceholder('Password').fill('Ivan');
     await newPage.waitForTimeout(1000)
