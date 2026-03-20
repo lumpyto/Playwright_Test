@@ -18,7 +18,7 @@ test('Handle different Tabs', async ({browser}) =>{
     )
     await newPage.getByRole('button', { name: 'Allow all cookies' }).click({ timeout: 3000 }).catch(() => {});
     await newPage.waitForLoadState("networkidle")
-    let emailField = newPage.getByLabel('Email or phone number');
+    const emailField = newPage.getByLabel('Email or phone number');
     await emailField.waitFor({ state: 'visible', timeout: 10000 });
     await emailField.focus();
     await emailField.fill('Lyubo');
