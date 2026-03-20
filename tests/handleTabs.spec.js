@@ -17,13 +17,13 @@ test('Handle different Tabs', async ({browser}) =>{
        
     )
     await newPage.getByRole('button', { name: 'Allow all cookies' }).click({ timeout: 3000 }).catch(() => {});
-    //await newPage.waitForLoadState("networkidle")
+    await newPage.waitForLoadState("networkidle")
     await newPage.getByLabel('Email or phone number').focus();
     await newPage.getByLabel('Email or phone number').fill('Lyubo');
     await newPage.getByPlaceholder('Password').fill('Ivan', { force: true });
-    await newPage.waitForTimeout(1000)
+    await newPage.waitForTimeout(1000);
     await newPage.close();
     
     await page.getByPlaceholder('Enter Email').fill('Lyubo Petrov');
-    await page.waitForTimeout(1000)
+    await page.waitForTimeout(1000);
 });
