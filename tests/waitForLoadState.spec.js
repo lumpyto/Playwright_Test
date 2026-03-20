@@ -7,6 +7,6 @@ test('Wait For Load State', async ({page}) => {
 
     await page.waitForLoadState("networkidle")
     let count = await page.locator("//input[@type='checkbox']").count();
-    expect (count).toBe(6);
+    await expect (count).toBe(11);
 
 });

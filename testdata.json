@@ -11,17 +11,17 @@
     },
     "user1": 
     {
-        "username": "Lyubo1@example.com",
+        "username": "Admin1",
         "password": "admin123"
     },
     "user2": 
     {
-        "username": "Lyubo2@example.com",
+        "username": "Admin2",
         "password": "admin123"
     },
     "user3": 
     {
-        "username": "Lyubo3@example.com",
+        "username": "Admin3",
         "password": "admin123"
     },
   "registeredUser": 

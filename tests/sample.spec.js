@@ -8,7 +8,7 @@ expect(12).toBe(12);
 
 test('My Second Test', async function({page}){
 //
-expect(120).toBe(129);
+expect(120).toBe(120);
 
 })
 

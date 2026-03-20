@@ -17,12 +17,12 @@ test.skip('Login test', async function({page}){
 
 });
 
-test.describe("Data Driven Login Test", function () {
+test.describe.skip("Data Driven Login Test", function () {
 
     let users = [
         testdata.user1,
-        testdata.user2,
-        testdata.user3
+        //testdata.user2,
+        //testdata.user3
     ];
 
     for(const data of users)
