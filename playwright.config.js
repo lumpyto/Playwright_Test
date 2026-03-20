@@ -33,7 +33,7 @@ export default defineConfig({
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    headless: false,
+    headless: true,
     trace: 'on-first-retry',
   },
 
@@ -44,7 +44,7 @@ export default defineConfig({
       use: {
         browserName: 'chromium',
         channel: 'chrome',   // използва инсталирания Chrome
-        headless: false,
+        headless: true,
         viewport: null,      // за да използва реалния размер на прозореца
         launchOptions: {
           args: ['--start-maximized']  // стартира maximized
