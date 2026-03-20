@@ -1,6 +1,6 @@
 import {test, expect} from '@playwright/test'
 
-test('Handle different Tabs', async ({browser}) =>{
+test.only('Handle different Tabs', async ({browser}) =>{
 
     let context = await browser.newContext()
 
@@ -17,8 +17,10 @@ test('Handle different Tabs', async ({browser}) =>{
        
     )
     await newPage.getByRole('button', { name: 'Allow all cookies' }).click({ timeout: 3000 }).catch(() => {});
+    await newPage.waitForLoadState("networkidle")
     await newPage.getByLabel('Email or phone number').fill('Lyubo');
-    await newPage.getByPlaceholder('Password').fill('Ivan');
+    
+    await newPage.getByPlaceholder('Password').fill('Ivan', { force: true });
     await newPage.waitForTimeout(1000)
     await newPage.close();
     
